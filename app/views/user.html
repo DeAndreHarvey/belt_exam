@@ -1,0 +1,27 @@
+<html>
+  <head>
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+      <div class="container-fluid">
+          <a href="/quotes">Dashboard</a> <a href="/logout">Logout</a>
+          <div class="row">
+    <h4>Post by {{user['alias']}}</h4>
+              
+      <h4>Count:{{count}}</h4>
+              
+          </div>
+          {% for quote in quotes%}
+          <h5>{{quote['author']}}:</h5><p>{{quote['message']}}</p>
+          {% endfor %}
+          
+      </div>
+      
+      
+      
+      
+  </body>
+</html>
